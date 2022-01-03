@@ -25,6 +25,7 @@ func TestCreateLoadBalancerPool(t *testing.T) {
               "description": "Primary data center - Provider XYZ",
               "name": "primary-dc-1",
               "enabled": true,
+              "healthy": true,
               "monitor": "f1aba936b94213e5b8dca0c0dbf1f9cc",
               "latitude": 55,
               "longitude": -12.5,
@@ -67,6 +68,7 @@ func TestCreateLoadBalancerPool(t *testing.T) {
               "description": "Primary data center - Provider XYZ",
               "name": "primary-dc-1",
               "enabled": true,
+              "healthy": true,
               "minimum_origins": 1,
               "monitor": "f1aba936b94213e5b8dca0c0dbf1f9cc",
               "latitude": 55,
@@ -115,6 +117,7 @@ func TestCreateLoadBalancerPool(t *testing.T) {
 		Description:    "Primary data center - Provider XYZ",
 		Name:           "primary-dc-1",
 		Enabled:        true,
+		Healthy:        true,
 		MinimumOrigins: 1,
 		Monitor:        "f1aba936b94213e5b8dca0c0dbf1f9cc",
 		Latitude:       fptr(55),
@@ -148,6 +151,7 @@ func TestCreateLoadBalancerPool(t *testing.T) {
 		Description: "Primary data center - Provider XYZ",
 		Name:        "primary-dc-1",
 		Enabled:     true,
+		Healthy:     true,
 		Monitor:     "f1aba936b94213e5b8dca0c0dbf1f9cc",
 		Latitude:    fptr(55),
 		Longitude:   fptr(-12.5),
@@ -202,6 +206,7 @@ func TestListLoadBalancerPools(t *testing.T) {
                     "description": "Primary data center - Provider XYZ",
                     "name": "primary-dc-1",
                     "enabled": true,
+                    "healthy": true,
                     "monitor": "f1aba936b94213e5b8dca0c0dbf1f9cc",
                     "origin_steering": {
                       "policy": "random"
@@ -237,6 +242,7 @@ func TestListLoadBalancerPools(t *testing.T) {
 			Description: "Primary data center - Provider XYZ",
 			Name:        "primary-dc-1",
 			Enabled:     true,
+			Healthy:     true,
 			Monitor:     "f1aba936b94213e5b8dca0c0dbf1f9cc",
 			OriginSteering: &LoadBalancerOriginSteering{
 				Policy: "random",
@@ -277,6 +283,7 @@ func TestLoadBalancerPoolDetails(t *testing.T) {
               "description": "Primary data center - Provider XYZ",
               "name": "primary-dc-1",
               "enabled": true,
+              "healthy": true,
               "monitor": "f1aba936b94213e5b8dca0c0dbf1f9cc",
               "origin_steering": {
                 "policy": "random"
@@ -304,6 +311,7 @@ func TestLoadBalancerPoolDetails(t *testing.T) {
 		Description: "Primary data center - Provider XYZ",
 		Name:        "primary-dc-1",
 		Enabled:     true,
+		Healthy:     true,
 		Monitor:     "f1aba936b94213e5b8dca0c0dbf1f9cc",
 		OriginSteering: &LoadBalancerOriginSteering{
 			Policy: "random",
@@ -365,6 +373,7 @@ func TestModifyLoadBalancerPool(t *testing.T) {
               "description": "Primary data center - Provider XYZZY",
               "name": "primary-dc-2",
               "enabled": false,
+              "healthy": false,
               "origin_steering": {
                 "policy": "random"
               },
@@ -398,6 +407,7 @@ func TestModifyLoadBalancerPool(t *testing.T) {
               "description": "Primary data center - Provider XYZZY",
               "name": "primary-dc-2",
               "enabled": false,
+              "healthy": false,
               "origin_steering": {
                 "policy": "random"
               },
