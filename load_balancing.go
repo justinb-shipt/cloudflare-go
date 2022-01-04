@@ -40,6 +40,7 @@ type LoadBalancerOrigin struct {
 	Enabled bool                `json:"enabled"`
 	Healthy bool                `json:"healthy"`
 	Weight  float64             `json:"weight"`
+	FailureReason string        `json:"failure_reason"`
 	Header  map[string][]string `json:"header"`
 }
 
