@@ -38,6 +38,7 @@ type LoadBalancerOrigin struct {
 	Name    string              `json:"name"`
 	Address string              `json:"address"`
 	Enabled bool                `json:"enabled"`
+	Healthy bool                `json:"healthy"`
 	Weight  float64             `json:"weight"`
 	Header  map[string][]string `json:"header"`
 }
